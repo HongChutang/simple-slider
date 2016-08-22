@@ -12,4 +12,4 @@ A Simple Slider Build on Vuejs.
 7. dots: 是否需要显示轮播切换定位点，默认为true；
 8. arrows: 是否需要显示左右点击切换箭头，默认为true。
 
-其中，items,count为必须传的配置参数，其他可以不传而是用默认值。
+其中，items,count为必须传的配置参数，其他可以不传而使用默认值。
