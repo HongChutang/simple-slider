@@ -2,7 +2,7 @@
 <div class="slider" @mouseover = "pause && pausePlay()" @mouseout = "pause && goPlay()">
   <ul :style="{'width': `${this.count * 100}%`, 'left': `${-100 * this.current}%`, transitionDuration: `${this.speed}s`}">
     <li class="slider-item" v-for="item in items" :style="{'width': `${100 / this.count}%`}">
-      <img :src="item.src", :alt="item.alt">
+      <a v-link="{path: item.link}" :style="'width': 100%"><img :src="item.src", :alt="item.alt" :style="'width': 100%"></a>
     </li>
   </ul>
   <slider-dots v-if="dots", :count="count", :current="current", :turn="turn"></slider-dots>
@@ -32,7 +32,7 @@
       count: {
         type: Number,
         required: true,
-        default: 4
+        default: 3
       },
       dots: {
         type: Boolean,
@@ -115,7 +115,7 @@
   display: inline-block;
   height: 260px;
 }
-.slider .slider-item > img {
+.slider .slider-item > a > img {
   display: block;
   height: 260px;
   width: 100%;
