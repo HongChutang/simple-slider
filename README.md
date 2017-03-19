@@ -1,4 +1,4 @@
-# Simple_Slider
+# simple-slider
 a simple slider component built on Vuejs.
 
 一个简单的轮播组件，使用Vuejs制作，支持父组件直接嵌套使用，利用props传送配置参数，参数有：  
